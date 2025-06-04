@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vuelos desde $49.999</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff6b00;
+      --primary-dark: #e55b00;
+      --background: #fffbea;
+      --text: #1f2937;
+      --subtext: #6b7280;
+      --highlight: #ff9f1c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #ffd166, #ff6b6b);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cloud {
+      position: absolute;
+      width: 100px;
+      opacity: 0.08;
+      animation: moveCloud 60s linear infinite;
+    }
+
+    .cloud1 { top: 5%; left: -200px; animation-delay: 0s; }
+    .cloud2 { top: 15%; left: -300px; animation-delay: 8s; }
+    .cloud3 { top: 30%; left: -250px; animation-delay: 16s; }
+    .cloud4 { top: 45%; left: -180px; animation-delay: 24s; }
+    .cloud5 { top: 60%; left: -220px; animation-delay: 32s; }
+    .cloud6 { top: 75%; left: -200px; animation-delay: 40s; }
+    .cloud7 { top: 85%; left: -300px; animation-delay: 48s; }
+    .cloud8 { top: 90%; left: -250px; animation-delay: 56s; }
+
+    @keyframes moveCloud {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(160vw); }
+    }
+
+    .container {
+      background-color: white;
+      padding: 3rem 2rem;
+      border-radius: 1.5rem;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      z-index: 1;
+      position: relative;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    h1 span {
+      color: var(--highlight);
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: var(--subtext);
+      margin-bottom: 2rem;
+    }
+
+    .promo-box {
+      background-color: #fff3e0;
+      padding: 1.2rem;
+      border-radius: 1rem;
+      border-left: 5px solid var(--highlight);
+      margin-bottom: 2rem;
+    }
+
+    .promo-box strong {
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .promo-box p {
+      font-size: 0.95rem;
+      color: var(--subtext);
+      margin: 0.5rem 0 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      background-color: var(--primary);
+      border: none;
+      border-radius: 9999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
+    }
+
+    .cta-button:hover {
+      background-color: var(--primary-dark);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="nube" class="cloud cloud1">
+  <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="nube" class="cloud cloud2">
+  <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="nube" class="cloud cloud3">
+  <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="nube" class="cloud cloud4">
+  <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="nube" class="cloud cloud5">
+  <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="nube" class="cloud cloud6">
+  <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="nube" class="cloud cloud7">
+  <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="nube" class="cloud cloud8">
+
+  <div class="container">
+    <h1>Vuelos a todo el país desde <span>$49.999</span></h1>
+    <p>Aprovecha esta oferta exclusiva y viaja por Colombia al mejor precio.</p>
+
+    <div class="promo-box">
+      <strong>Solo por tiempo limitado</strong>
+      <p>Reserva antes del 10 de junio y viaja hasta diciembre.</p>
+    </div>
+
+    <a href="#" class="cta-button">Compra ahora</a>
+  </div>
+</body>
+</html>
